@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	tools:context=".View.AddItemDialog"
+	android:orientation="vertical"
+	android:layout_gravity="center">
+
+
+	<EditText
+		android:id="@+id/name"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:ems="12"
+		android:hint="Item Name"
+		android:inputType="text" />
+	<LinearLayout
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:layout_gravity="center">
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Weight: "
+			android:layout_gravity="center"
+			android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+		<EditText
+			android:id="@+id/weight"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:ems="5"
+			android:layout_gravity="center"
+			android:hint="1-100"
+			android:inputType="number"
+			android:text="10"/>
+	</LinearLayout>
+	<LinearLayout
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:layout_gravity="center">
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Enable from:"
+			android:layout_gravity="center"
+			android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+		<EditText
+			android:id="@+id/enableTime"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:ems="7"
+			android:layout_gravity="center"
+			android:hint="Blank if always"
+			android:inputType="time"/>
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:layout_gravity="center">
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Enable until: "
+			android:layout_gravity="center"
+			android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+		<EditText
+			android:id="@+id/disableTime"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:ems="7"
+			android:layout_gravity="center"
+			android:hint="Blank if always"
+			android:inputType="time"/>
+	</LinearLayout>
+	<TextView
+		android:id="@+id/errorMsg"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+		android:textColor="@android:color/holo_red_dark"
+		android:visibility="gone"/>
+
+</LinearLayout>
